@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Main2Activity">
 
-   <fragment
-       android:name="khoapham.ptp.phamtanphat.fragmentorientation2802.FragmentList"
-       android:id="@+id/fragmentListPort"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"/>
-
+    <fragment
+        android:name="khoapham.ptp.phamtanphat.fragmentorientation2802.FragmentChitiet"
+        android:id="@+id/fragmentChitietPort"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>
