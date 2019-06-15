@@ -6,11 +6,13 @@
     android:weightSum="10">
 
     <fragment
+        android:name="khoapham.ptp.phamtanphat.fragmentorientation2802.FragmentList"
         android:id="@+id/fragmentListLand"
         android:layout_weight="4"
         android:layout_width="0dp"
         android:layout_height="match_parent"/>
     <fragment
+        android:name="khoapham.ptp.phamtanphat.fragmentorientation2802.FragmentChitiet"
         android:id="@+id/fragmentChitietLand"
         android:layout_weight="6"
         android:layout_width="0dp"
