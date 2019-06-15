@@ -22,6 +22,7 @@ public class FragmentList extends ListFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_list,container,false);
 
+        truyendulieu = (Truyendulieu) getActivity();
 
         mangten.add("Nguyen Van A");
         mangten.add("Nguyen Van B");
@@ -36,12 +37,8 @@ public class FragmentList extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        FragmentChitiet fragmentChitiet = (FragmentChitiet) getActivity().getSupportFragmentManager().findFragmentById(R.id.fragmentChitietLand);
-        if (fragmentChitiet!= null){
-            truyendulieu = fragmentChitiet;
-            truyendulieu.datarecive(mangten.get(position));
-        }
-
+        truyendulieu.datarecive(mangten.get(position));
         super.onListItemClick(l, v, position, id);
     }
+
 }

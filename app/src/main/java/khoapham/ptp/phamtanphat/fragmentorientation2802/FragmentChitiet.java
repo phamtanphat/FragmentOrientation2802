@@ -24,4 +24,5 @@ public class FragmentChitiet extends Fragment implements Truyendulieu {
     public void datarecive(String value) {
         txtChitiet.setText(value);
     }
+
 }
