@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -15,7 +16,7 @@ public class FragmentList extends ListFragment {
     View view;
     ArrayList<String> mangten = new ArrayList<>();
     ArrayAdapter arrayAdapter;
-
+    Truyendulieu truyendulieu;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -29,7 +30,18 @@ public class FragmentList extends ListFragment {
         mangten.add("Nguyen Van E");
         arrayAdapter = new ArrayAdapter(getActivity(),android.R.layout.simple_list_item_1,mangten);
         setListAdapter(arrayAdapter);
+
         return view;
     }
 
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        FragmentChitiet fragmentChitiet = (FragmentChitiet) getActivity().getSupportFragmentManager().findFragmentById(R.id.fragmentChitietLand);
+        if (fragmentChitiet!= null){
+            truyendulieu = fragmentChitiet;
+            truyendulieu.datarecive(mangten.get(position));
+        }
+
+        super.onListItemClick(l, v, position, id);
+    }
 }
