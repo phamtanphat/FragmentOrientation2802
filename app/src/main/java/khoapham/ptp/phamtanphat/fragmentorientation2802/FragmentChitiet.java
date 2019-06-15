@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class FragmentChitiet extends Fragment {
+public class FragmentChitiet extends Fragment implements Truyendulieu {
 
     View view;
     TextView txtChitiet;
@@ -20,4 +20,8 @@ public class FragmentChitiet extends Fragment {
         return view;
     }
 
+    @Override
+    public void datarecive(String value) {
+        txtChitiet.setText(value);
+    }
 }
